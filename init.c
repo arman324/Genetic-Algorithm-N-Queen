@@ -11,10 +11,13 @@ double sumFitness = 0;
 double maxFitness = 0;
 double minFitness = 0;
 double avgFitness = 0;
+double normal_fitness = 0;
+double comulative = 0;
+double comulative_fitness[100] = {0};
 
 void initData();
 void initPop();
-int advance_random(int lchrom, int seed);
+int rnd(int high, int seed);
 double eval(int chromosome[], int lchrom);
 void initReport();
 void statistics(int popSize);
@@ -28,24 +31,17 @@ void initialize(){
 
   statistics(popSize); //calculate sum of fitness
 
-  initReport();
+  //initReport();
 
 }
 
 void initData(){
 
-  while(1){
-    printf("Enter population size (use 50 or 100) - popSize-> ");
+    printf("Enter population size - popSize-> ");
     scanf("%d", &popSize);
-    if (popSize == 50 || popSize == 100){
-      printf("population size is : %d\n",popSize);
-      break;
-    }
-    else{
-      printf("\nNote population size must be 50 or 100\n");
-      continue;
-    }
-  }
+    printf("population size is : %d\n",popSize);
+
+
   while(1){
     printf("Enter chromosome length (8 queen or 25 queen or 50 queen) - lChrom-> ");
     scanf("%d", &lchrom);
@@ -58,6 +54,7 @@ void initData(){
       continue;
     }
   }
+
 }
 
 void initPop(){ //generate population
@@ -77,7 +74,7 @@ void initPop(){ //generate population
 
   for(i=0; i<popSize; i++) {
      for(j=0; j<lchrom; j++) {
-        population[i][j] = advance_random(lchrom,seed[i][j]); //generate random population
+        population[i][j] = rnd(lchrom,seed[i][j]); //generate random population
      }
   }
 
@@ -104,7 +101,7 @@ void initReport(){
      for(int j=0; j<lchrom; j++) {
         printf("%d ", population[i][j]);
         if(j == (lchrom-1)){
-           printf(" fitness => %f\n", fitness[i]);
+           printf(" fitness => %f   %f\n", fitness[i],comulative_fitness[i]);
         }
      }
   }

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int advance_random(int lchrom, int seed){
+int rnd(int high, int seed){
 
   srand(seed);
-  return rand()%lchrom + 1;
+  return rand()%high + 1;
 }

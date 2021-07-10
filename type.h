@@ -5,3 +5,6 @@ extern double minFitness;
 extern double avgFitness;
 extern int popSize;
 extern int lchrom;
+extern double normal_fitness;
+extern double comulative ;
+extern double comulative_fitness[100];
