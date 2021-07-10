@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 int popSize;
 int lchrom;
 void initData();
 void initPop();
-int advance_random(int lchrom);
+int advance_random(int lchrom, int seed);
 
 void initialize(){
 
@@ -44,18 +45,25 @@ void initData(){
 }
 
 void initPop(){ //generate population
-  printf("We are in initPop\n");
-  printf("%d,%d\n",popSize,lchrom);
-
   int population[50][8] = {0};
 
   printf("Two Dimensional array elements:\n");
   int j;
   int i;
 
+  srand(time(NULL));
+
+	int seed[50][8];
+
   for(i=0; i<popSize; i++) {
      for(j=0; j<lchrom; j++) {
-        population[i][j] = advance_random(lchrom); //generate random population
+       seed[i][j] = rand();
+     }
+  }
+
+  for(i=0; i<popSize; i++) {
+     for(j=0; j<lchrom; j++) {
+        population[i][j] = advance_random(lchrom,seed[i][j]); //generate random population
      }
   }
 
