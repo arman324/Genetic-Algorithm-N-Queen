@@ -14,6 +14,7 @@ double avgFitness = 0;
 double normal_fitness = 0;
 double comulative = 0;
 double comulative_fitness[100] = {0};
+double comulative_sub[100] = {0};
 
 void initData();
 void initPop();
@@ -35,7 +36,13 @@ void initialize(){
 
 }
 
-void initData(){
+void initData(){/* inittialize global params,
+
+     popsize:   population size
+     lchrom :   chromosome lenght
+     maxgen :   maximum no. of generations.
+     pcross :   crossover probability
+     pmut   :   mutation probability           */
 
     printf("Enter population size - popSize-> ");
     scanf("%d", &popSize);

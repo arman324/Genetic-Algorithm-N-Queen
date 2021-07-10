@@ -8,3 +8,5 @@ extern int lchrom;
 extern double normal_fitness;
 extern double comulative ;
 extern double comulative_fitness[100];
+extern double comulative_sub[100];
+extern int population[100][50];
