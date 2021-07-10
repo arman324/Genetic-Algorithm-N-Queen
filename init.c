@@ -6,6 +6,7 @@ int popSize;
 int lchrom;
 void initData();
 void initPop();
+int advance_random(int lchrom);
 
 void initialize(){
 
@@ -42,7 +43,30 @@ void initData(){
   }
 }
 
-void initPop(){ //init population
+void initPop(){ //generate population
   printf("We are in initPop\n");
   printf("%d,%d\n",popSize,lchrom);
+
+  int population[50][8] = {0};
+
+  printf("Two Dimensional array elements:\n");
+  int j;
+  int i;
+
+  for(i=0; i<popSize; i++) {
+     for(j=0; j<lchrom; j++) {
+        population[i][j] = advance_random(lchrom); //generate random population
+     }
+  }
+
+  for(i=0; i<popSize; i++) {
+     printf("%d: ", i+1);
+     for(j=0; j<lchrom; j++) {
+        printf("%d ", population[i][j]);
+        if(j == (lchrom-1)){
+           printf("\n");
+        }
+     }
+  }
+
 }
