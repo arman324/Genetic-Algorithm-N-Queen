@@ -7,14 +7,17 @@ int popSize;
 int lchrom;
 int population[100][50] = {0};
 double fitness[100] = {0};
-double total_fitness;
+double sumFitness = 0;
+double maxFitness = 0;
+double minFitness = 0;
+double avgFitness = 0;
 
 void initData();
 void initPop();
 int advance_random(int lchrom, int seed);
 double eval(int chromosome[], int lchrom);
 void initReport();
-void statistics();
+void statistics(int popSize);
 
 
 void initialize(){
@@ -23,7 +26,7 @@ void initialize(){
 
   initPop();
 
-  statistics(); //calculate sum of fitness
+  statistics(popSize); //calculate sum of fitness
 
   initReport();
 
@@ -61,7 +64,6 @@ void initPop(){ //generate population
 
   int j;
   int i;
-  total_fitness = 0;
 
   srand(time(NULL));
 
@@ -81,7 +83,6 @@ void initPop(){ //generate population
 
   for(i=0; i<popSize; i++) {
     fitness[i] = eval(population[i], lchrom); //calculate fitness
-    //total_fitness += fitness[i];
   }
 
 }
@@ -94,9 +95,9 @@ void initReport(){
   //printf("Crossover Probability (pcross)  %lf\n", p->pCross);
   //printf("Mutation Probability (pmut)  %lf\n", p->pMut);
   //printf("\n\t\tFirst Generation Stats  \n\n");
-  //printf("Maximum Fitness  %lf\n", p->max);
-  //printf("Average Fitness  %lf\n", p->avg);
-  //printf("Minimum Fitness  %lf\n", p->min);
+  printf("Maximum Fitness  %f\n", maxFitness);
+  printf("Average Fitness  %lf\n", avgFitness);
+  printf("Minimum Fitness  %f\n", minFitness);
 
   for(int i=0; i<popSize; i++) {
      printf("%d: ", i+1);
