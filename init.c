@@ -7,16 +7,24 @@ int popSize;
 int lchrom;
 int population[100][50] = {0};
 double fitness[100] = {0};
+double total_fitness;
+
 void initData();
 void initPop();
 int advance_random(int lchrom, int seed);
 double eval(int chromosome[], int lchrom);
 void initReport();
+void statistics();
+
 
 void initialize(){
 
   initData();
+
   initPop();
+
+  statistics(); //calculate sum of fitness
+
   initReport();
 
 }
@@ -53,6 +61,7 @@ void initPop(){ //generate population
 
   int j;
   int i;
+  total_fitness = 0;
 
   srand(time(NULL));
 
@@ -72,6 +81,7 @@ void initPop(){ //generate population
 
   for(i=0; i<popSize; i++) {
     fitness[i] = eval(population[i], lchrom); //calculate fitness
+    //total_fitness += fitness[i];
   }
 
 }
