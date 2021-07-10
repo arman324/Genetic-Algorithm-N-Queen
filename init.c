@@ -8,6 +8,7 @@ int lchrom;
 void initData();
 void initPop();
 int advance_random(int lchrom, int seed);
+double eval(int chromosome[], int lchrom);
 
 void initialize(){
 
@@ -46,6 +47,7 @@ void initData(){
 
 void initPop(){ //generate population
   int population[50][8] = {0};
+  double fitness[50] = {0};
 
   printf("Two Dimensional array elements:\n");
   int j;
@@ -68,11 +70,15 @@ void initPop(){ //generate population
   }
 
   for(i=0; i<popSize; i++) {
+    fitness[i] = eval(population[i], lchrom); //calculate fitness
+  }
+
+  for(i=0; i<popSize; i++) {
      printf("%d: ", i+1);
      for(j=0; j<lchrom; j++) {
         printf("%d ", population[i][j]);
         if(j == (lchrom-1)){
-           printf("\n");
+           printf(" fitness => %f\n", fitness[i]);
         }
      }
   }
