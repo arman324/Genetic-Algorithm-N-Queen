@@ -5,8 +5,8 @@
 
 int popSize;
 int lchrom;
-int population[50][8] = {0};
-double fitness[50] = {0};
+int population[100][50] = {0};
+double fitness[100] = {0};
 void initData();
 void initPop();
 int advance_random(int lchrom, int seed);
@@ -56,7 +56,7 @@ void initPop(){ //generate population
 
   srand(time(NULL));
 
-	int seed[50][8];
+	int seed[100][50];
 
   for(i=0; i<popSize; i++) {
      for(j=0; j<lchrom; j++) {
