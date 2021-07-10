@@ -5,15 +5,19 @@
 
 int popSize;
 int lchrom;
+int population[50][8] = {0};
+double fitness[50] = {0};
 void initData();
 void initPop();
 int advance_random(int lchrom, int seed);
 double eval(int chromosome[], int lchrom);
+void initReport();
 
 void initialize(){
 
   initData();
   initPop();
+  initReport();
 
 }
 
@@ -46,10 +50,7 @@ void initData(){
 }
 
 void initPop(){ //generate population
-  int population[50][8] = {0};
-  double fitness[50] = {0};
 
-  printf("Two Dimensional array elements:\n");
   int j;
   int i;
 
@@ -73,9 +74,23 @@ void initPop(){ //generate population
     fitness[i] = eval(population[i], lchrom); //calculate fitness
   }
 
-  for(i=0; i<popSize; i++) {
+}
+
+void initReport(){
+
+  printf("\n\nPopulation Size(popsize)  %d\n", popSize);
+  printf("Chromosome length (lchrom)  %d\n", lchrom);
+  //printf("Maximum num of generations(maxgen)  %d\n", p->maxGen);
+  //printf("Crossover Probability (pcross)  %lf\n", p->pCross);
+  //printf("Mutation Probability (pmut)  %lf\n", p->pMut);
+  //printf("\n\t\tFirst Generation Stats  \n\n");
+  //printf("Maximum Fitness  %lf\n", p->max);
+  //printf("Average Fitness  %lf\n", p->avg);
+  //printf("Minimum Fitness  %lf\n", p->min);
+
+  for(int i=0; i<popSize; i++) {
      printf("%d: ", i+1);
-     for(j=0; j<lchrom; j++) {
+     for(int j=0; j<lchrom; j++) {
         printf("%d ", population[i][j]);
         if(j == (lchrom-1)){
            printf(" fitness => %f\n", fitness[i]);
