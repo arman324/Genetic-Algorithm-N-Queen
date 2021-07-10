@@ -5,7 +5,7 @@
 *
 
 ## How to Run
-1. ``gcc -Wall -o output main.c init.c random.c eval.c stats.c gen.c``
+1. ``gcc -Wall -o output main.c init.c random.c eval.c stats.c gen.c select.c xover.c``
 2. ``./output``
 
 
