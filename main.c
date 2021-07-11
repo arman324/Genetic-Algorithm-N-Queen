@@ -3,16 +3,22 @@
 
 void initialize();
 void generation();
+void nextGen();
 void initReport();
+void statistics(int popSize, double fitness[]);
+
 
 int main(int argc, char **argv) {
-  int i = 0;
+  int gen = 0;
   initialize();
-  while(i < 1){ //100?
+  while(gen < 1){ //100?
     generation();
     initReport();
+    nextGen();
 
-    i++;
+    //statistics(popSize, fitness);
+
+    gen++;
 }
   return 0;
 }

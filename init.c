@@ -8,6 +8,7 @@ int lchrom;
 int population[100][50] = {0};
 int children[100][50] = {0};
 double fitness[100] = {0};
+double fitness_children[100] = {0};
 double sumFitness = 0;
 double maxFitness = 0;
 double minFitness = 0;
@@ -24,8 +25,7 @@ void initPop();
 int advance_random(int high, int seed);
 double eval(int chromosome[], int lchrom);
 void initReport();
-void statistics(int popSize);
-
+void statistics(int popSize, double fitness[]);
 
 void initialize(){
 
@@ -33,7 +33,7 @@ void initialize(){
 
   initPop();
 
-  statistics(popSize); //calculate sum of fitness
+  statistics(popSize, fitness); //calculate sum of fitness
 
   //initReport();
 

@@ -2,7 +2,7 @@
 #include "type.h"
 
 
-void statistics(int popSize){ /* calculate population stats */
+void statistics(int popSize, double fitness[]){ /* calculate population stats */
  double temp = 0;
 
   for(int i=0; i<popSize; i++) {
