@@ -25,7 +25,7 @@ void initPop();
 int advance_random(int high, int seed);
 double eval(int chromosome[], int lchrom);
 void initReport();
-void statistics(int popSize, double fitness[]);
+void statistics(int popSize);
 
 void initialize(){
 
@@ -33,8 +33,13 @@ void initialize(){
 
   initPop();
 
-  statistics(popSize, fitness); //calculate sum of fitness
+  statistics(popSize); //calculate sum of fitness
 
+  for (int i=0; i < popSize; i++){
+    normal_fitness = (fitness[i]/sumFitness);
+    comulative += normal_fitness;
+    comulative_fitness[i] = comulative;
+  }
   //initReport();
 
 }

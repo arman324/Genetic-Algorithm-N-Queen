@@ -4,7 +4,7 @@
 int roulette(int sumFitness, int popSize);
 void crossover(int om1[], int om2[]);
 double eval(int chromosome[], int lchrom);
-
+void statistics(int popSize);
 
 void generation(){
 
@@ -12,14 +12,7 @@ void generation(){
   int k = 0;
   int om1[50] = {0};
   int om2[50] = {0};
-  comulative = 0;
-  normal_fitness = 0;
-  
-  for (int i=0; i < popSize; i++){
-    normal_fitness = (fitness[i]/sumFitness);
-    comulative += normal_fitness;
-    comulative_fitness[i] = comulative;
-  }
+
 
   for(int i = 0; i < popSize; i += 2){
 
@@ -29,6 +22,7 @@ void generation(){
     for (int i = 0; i< lchrom; i++){
       om1[i] = population[p1][i];
       om2[i] = population[p2][i];
+
     }
 
     crossover(om1,om2);
@@ -63,6 +57,8 @@ void generation(){
   for(int i=0; i<popSize; i++) {
     fitness_children[i] = eval(children[i], lchrom); //calculate fitness
   }
+  printf("IN GEN 5\n");
+
   printf("\n\nchildreeeeenn =>\n\n");
   for(int i=0; i<popSize; i++) {
      printf("%d: ", i+1);
@@ -96,6 +92,17 @@ void nextGen(){
              printf(" fitness => %f\n", fitness[i]);
           }
        }
+    }
+    comulative = 0;
+    normal_fitness = 0;
+    sumFitness = 0;
+
+    statistics(popSize);
+
+    for (int i=0; i < popSize; i++){
+      normal_fitness = (fitness[i]/sumFitness);
+      comulative += normal_fitness;
+      comulative_fitness[i] = comulative;
     }
 
 }
