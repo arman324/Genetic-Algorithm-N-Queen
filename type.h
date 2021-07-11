@@ -10,3 +10,6 @@ extern double comulative ;
 extern double comulative_fitness[100];
 extern double comulative_sub[100];
 extern int population[100][50];
+extern int children[100][50];
+extern int ci1[50];
+extern int ci2[50];

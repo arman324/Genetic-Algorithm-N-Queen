@@ -6,6 +6,7 @@
 int popSize;
 int lchrom;
 int population[100][50] = {0};
+int children[100][50] = {0};
 double fitness[100] = {0};
 double sumFitness = 0;
 double maxFitness = 0;
@@ -15,10 +16,12 @@ double normal_fitness = 0;
 double comulative = 0;
 double comulative_fitness[100] = {0};
 double comulative_sub[100] = {0};
+int ci1[50] = {0};
+int ci2[50] = {0};
 
 void initData();
 void initPop();
-int rnd(int high, int seed);
+int advance_random(int high, int seed);
 double eval(int chromosome[], int lchrom);
 void initReport();
 void statistics(int popSize);
@@ -81,7 +84,7 @@ void initPop(){ //generate population
 
   for(i=0; i<popSize; i++) {
      for(j=0; j<lchrom; j++) {
-        population[i][j] = rnd(lchrom,seed[i][j]); //generate random population
+        population[i][j] = advance_random(lchrom,seed[i][j]); //generate random population
      }
   }
 

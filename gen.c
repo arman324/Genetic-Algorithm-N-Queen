@@ -2,6 +2,7 @@
 #include "type.h"
 
 int roulette(int sumFitness, int popSize);
+void crossover(int om1[], int om2[]);
 
 void generation(){
 
@@ -25,18 +26,26 @@ void generation(){
       om2[i] = population[p2][i];
     }
 
-    for (int i = 0; i< lchrom; i++){
-      printf("%d ", om1[i]);
-    }
+    crossover(om1,om2);
 
+    //ezafe kardan bache ha be file children
+    for (int i = 0; i < lchrom; i++){
+        printf("%d ", om1[i]);
+    }
     printf("\n");
 
-    for (int i = 0; i< lchrom; i++){
-      printf("%d ", om2[i]);
+    for (int i = 0; i < lchrom; i++){
+        printf("%d ", om2[i]);
     }
+    printf("\nnew children =>\n");
 
+    for (int i = 0; i < lchrom; i++){
+        printf("%d ", ci1[i]);
+    }
     printf("\n");
-    //crossover
+
+
   }
 
+   //tabdil file children be parent
 }
