@@ -57,9 +57,9 @@ void generation(){
   for(int i=0; i<popSize; i++) {
     fitness_children[i] = eval(children[i], lchrom); //calculate fitness
   }
-  printf("IN GEN 5\n");
 
-  printf("\n\nchildreeeeenn =>\n\n");
+/*
+  printf("\n\children =>\n\n");
   for(int i=0; i<popSize; i++) {
      printf("%d: ", i+1);
      for(int j=0; j<lchrom; j++) {
@@ -68,22 +68,23 @@ void generation(){
            printf(" fitness => %f\n", fitness_children[i]);
         }
      }
-  }
+  }*/
 
 }
 
 void nextGen(){
-    //tabdil file children be parent
+    //Turning children into parents
     for(int i=0; i<popSize; i++) {
        for(int j=0; j<lchrom; j++) {
           population[i][j] = children[i][j];
        }
     }
-    //tabdile file fitness children be parent
+
+    //Turning children fitness into parents fitness
     for(int i=0; i<popSize; i++) {
       fitness[i] = fitness_children[i];
     }
-    printf("\n\nnewwww parentttttt =>\n\n");
+    printf("\n\nnew parents =>\n\n");
     for(int i=0; i<popSize; i++) {
        printf("%d: ", i+1);
        for(int j=0; j<lchrom; j++) {

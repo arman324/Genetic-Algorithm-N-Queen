@@ -28,7 +28,6 @@ int roulette(int sumFitness, int popSize)
       continue;
     }
   }
-  printf("COMULATIIIIIIIVEREEEE FIIIINESSSSS%d\n",p );
 
   return p;
 

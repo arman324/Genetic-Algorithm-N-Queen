@@ -5,20 +5,21 @@
 
 int popSize;
 int lchrom;
-int population[100][50] = {0};
-int children[100][50] = {0};
-double fitness[100] = {0};
-double fitness_children[100] = {0};
+int population[1000][50] = {0};
+int children[1000][50] = {0};
+double fitness[1000] = {0};
+double fitness_children[1000] = {0};
 double sumFitness = 0;
 double maxFitness = 0;
 double minFitness = 0;
 double avgFitness = 0;
 double normal_fitness = 0;
 double comulative = 0;
-double comulative_fitness[100] = {0};
-double comulative_sub[100] = {0};
+double comulative_fitness[1000] = {0};
+double comulative_sub[1000] = {0};
 int ci1[50] = {0};
 int ci2[50] = {0};
+
 
 void initData();
 void initPop();
@@ -79,7 +80,7 @@ void initPop(){ //generate population
 
   srand(time(NULL));
 
-	int seed[100][50];
+	int seed[1000][50];
 
   for(i=0; i<popSize; i++) {
      for(j=0; j<lchrom; j++) {
