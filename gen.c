@@ -37,8 +37,8 @@ void generation(){
 
 
     if (rndm <= pCross) {//pCross
-      crossover(om1,om2); //one point crossover
-      //twoPointCrossover(om1,om2); //two points crossover
+      //crossover(om1,om2); //one point crossover
+      twoPointCrossover(om1,om2); //two points crossover
     }
     else {
       for (int i = 0; i < lchrom; i++){

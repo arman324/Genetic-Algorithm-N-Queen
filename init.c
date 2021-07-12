@@ -96,13 +96,13 @@ void initPop(){ //generate population
        seed[i][j] = rand();
      }
   }
-
+//
   for(i=0; i<popSize; i++) {
      for(j=0; j<lchrom; j++) {
         population[i][j] = advance_random(lchrom,seed[i][j]); //generate random population
      }
   }
-
+//
   for(i=0; i<popSize; i++) {
     fitness[i] = eval(population[i], lchrom); //calculate fitness
   }
