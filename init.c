@@ -72,7 +72,7 @@ void initData(){/* inittialize global params,
 
     //printf("Enter pMut - pMut -> ");
     //scanf("%lf", &pMut);
-    pMut = 0.01;
+    pMut = 0.001;
     printf("pMut is : %lf\n", pMut);
 
     //printf("Enter pCross - pCross -> ");
@@ -87,7 +87,7 @@ void initPop(){ //generate population
   int j;
   int i;
 
-  srand(time(NULL));
+  srand(5);
 
 	int seed[1000][50];
 
@@ -113,10 +113,6 @@ void initReport(){
 
   printf("\n\nPopulation Size(popsize)  %d\n", popSize);
   printf("Chromosome length (lchrom)  %d\n", lchrom);
-  //printf("Maximum num of generations(maxgen)  %d\n", p->maxGen);
-  //printf("Crossover Probability (pcross)  %lf\n", p->pCross);
-  //printf("Mutation Probability (pmut)  %lf\n", p->pMut);
-  //printf("\n\t\tFirst Generation Stats  \n\n");
   printf("Maximum Fitness  %f\n", maxFitness);
   printf("Average Fitness  %lf\n", avgFitness);
   printf("Minimum Fitness  %f\n", minFitness);

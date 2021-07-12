@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
   int flag = 0;
   initialize();
 
-  while(gen < MaxGen){ //100?
+  while(gen < MaxGen){ 
     generation();
     initReport();
     nextGen();

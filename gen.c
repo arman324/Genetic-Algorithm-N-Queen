@@ -3,6 +3,7 @@
 
 int roulette(int sumFitness, int popSize);
 void crossover(int om1[], int om2[]);
+void twoPointCrossover(int om1[], int om2[]);
 double eval(int chromosome[], int lchrom);
 void statistics(int popSize);
 float f_random();
@@ -28,8 +29,11 @@ void generation(){
 
     rndm = f_random();
     printf("RNDM -> %f\n", rndm);
+
+
     if (rndm <= pCross) {//pCross
-      crossover(om1,om2);
+      crossover(om1,om2); //one point crossover
+      //twoPointCrossover(om1,om2); //two points crossover
     }
     else {
       for (int i = 0; i < lchrom; i++){

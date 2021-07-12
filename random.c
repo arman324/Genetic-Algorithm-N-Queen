@@ -24,3 +24,15 @@ int rnd(int low, int high)
   }
   return i;
 }
+
+int TCrnd(int low, int high)
+{ /* pick a random int between low and high */
+  int i;
+
+  if(low >= high) {
+    i = low;
+  } else {
+    i = rand()%(high-low) + low;
+  }
+  return i;
+}
