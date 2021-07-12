@@ -91,9 +91,18 @@ void nextGen(){
           printf("%d ", population[i][j]);
           if(j == (lchrom-1)){
              printf(" fitness => %f\n", fitness[i]);
+             if (fitness[i] == 1.000000)
+             {
+
+               for (int k=0; k<lchrom; k++){
+                 solution[k] = population[i][k];
+               }
+             }
           }
        }
     }
+
+
     comulative = 0;
     normal_fitness = 0;
     sumFitness = 0;

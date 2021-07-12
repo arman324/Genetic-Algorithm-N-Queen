@@ -14,3 +14,6 @@ extern int population[1000][50];
 extern int children[1000][50];
 extern int ci1[50];
 extern int ci2[50];
+extern int MaxGen;
+extern int gen;
+extern int solution[50];

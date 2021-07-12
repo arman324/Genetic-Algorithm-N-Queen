@@ -19,7 +19,9 @@ double comulative_fitness[1000] = {0};
 double comulative_sub[1000] = {0};
 int ci1[50] = {0};
 int ci2[50] = {0};
-
+int MaxGen = 0;
+int gen = 0;
+int solution[50] = {0};
 
 void initData();
 void initPop();
@@ -57,19 +59,13 @@ void initData(){/* inittialize global params,
     scanf("%d", &popSize);
     printf("population size is : %d\n",popSize);
 
-
-  while(1){
-    printf("Enter chromosome length (8 queen or 25 queen or 50 queen) - lChrom-> ");
+    printf("Enter chromosome length - lChrom-> ");
     scanf("%d", &lchrom);
-    if (lchrom == 8 || lchrom == 25  || lchrom == 50){
-      printf("chromosome length is : %d\n",lchrom);
-      break;
-    }
-    else{
-      printf("\nNote chromosome length must be 8 or 25 or 50\n");
-      continue;
-    }
-  }
+    printf("hromosome length is : %d\n", lchrom);
+
+    printf("Enter MaxGen - MaxGen -> ");
+    scanf("%d", &MaxGen);
+    printf("MaxGen is : %d\n", MaxGen);
 
 }
 
