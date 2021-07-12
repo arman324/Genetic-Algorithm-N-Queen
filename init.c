@@ -22,7 +22,8 @@ int ci2[50] = {0};
 int MaxGen = 0;
 int gen = 0;
 int solution[50] = {0};
-double pMut = 0.001;
+double pMut;
+double pCross;
 int cnt = 0;
 
 void initData();
@@ -63,11 +64,21 @@ void initData(){/* inittialize global params,
 
     printf("Enter chromosome length - lChrom-> ");
     scanf("%d", &lchrom);
-    printf("hromosome length is : %d\n", lchrom);
+    printf("chromosome length is : %d\n", lchrom);
 
     printf("Enter MaxGen - MaxGen -> ");
     scanf("%d", &MaxGen);
     printf("MaxGen is : %d\n", MaxGen);
+
+    //printf("Enter pMut - pMut -> ");
+    //scanf("%lf", &pMut);
+    pMut = 0.01;
+    printf("pMut is : %lf\n", pMut);
+
+    //printf("Enter pCross - pCross -> ");
+    //scanf("%lf", &pCross);
+    pCross = 0.8;
+    printf("pCross is : %lf\n", pCross);
 
 }
 

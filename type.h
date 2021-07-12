@@ -18,4 +18,5 @@ extern int MaxGen;
 extern int gen;
 extern int solution[50];
 extern double pMut;
+extern double pCross;
 extern int cnt;

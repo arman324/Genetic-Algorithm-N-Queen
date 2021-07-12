@@ -18,8 +18,8 @@ void rawStat(int flag)
   printf("\n\nPopulation Size(popsize)  -->  %d\n", popSize);
   printf("Chromosome length (lchrom)  -->  %d\n", lchrom);
   printf("Maximum num of generations (MaxGen)  -->  %d\n", gen);
-  //printf("Crossover Probability (pcross)  %lf\n", p->pCross);
-  //printf("Mutation Probability (pmut)  %lf\n", p->pMut);
+  printf("Crossover Probability (pcross)  %lf\n", pCross);
+  printf("Mutation Probability (pmut)  %lf\n", pMut);
   printf("Maximum Fitness  -->  %f\n", maxFitness);
   printf("Average Fitness  -->  %lf\n", avgFitness);
   printf("Minimum Fitness  -->  %f\n", minFitness);

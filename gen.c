@@ -27,8 +27,8 @@ void generation(){
     }
 
     rndm = f_random();
-    printf("RNDMMMM -> %f\n", rndm);
-    if (rndm <= 0.8) {//pCross
+    printf("RNDM -> %f\n", rndm);
+    if (rndm <= pCross) {//pCross
       crossover(om1,om2);
     }
     else {
