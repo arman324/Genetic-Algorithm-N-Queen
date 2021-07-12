@@ -7,6 +7,7 @@ void twoPointCrossover(int om1[], int om2[]);
 double eval(int chromosome[], int lchrom);
 void statistics(int popSize);
 float f_random();
+int tournament(int popSize);
 
 
 void generation(){
@@ -19,8 +20,12 @@ void generation(){
 
   for(int i = 0; i < popSize; i += 2){
 
+    /*
     p1 = roulette(sumFitness, popSize);
     p2 = roulette(sumFitness, popSize);
+*/
+    p1 = tournament(popSize);
+    p2 = tournament(popSize);
 
     for (int i = 0; i< lchrom; i++){
       om1[i] = population[p1][i];

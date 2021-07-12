@@ -4,6 +4,10 @@
 #include <stdlib.h>
 
 float f_random();
+int tournament(int popSize);
+int TCrnd(int low, int high);
+
+
 
 int roulette(int sumFitness, int popSize)
 {
@@ -30,5 +34,26 @@ int roulette(int sumFitness, int popSize)
   }
 
   return p;
+
+}
+
+int tournament(int popSize)
+{
+  int rnd1,rnd2;
+  double f1,f2;
+
+  // select k parents randomly from all parents
+  rnd1 = TCrnd(0, popSize);
+  f1 = fitness[rnd1];
+
+  rnd2 = TCrnd(0, popSize);
+  f2 = fitness[rnd2];
+
+  if (f1 > f2){
+    return rnd1;
+  }else{
+    return rnd2;
+  }
+
 
 }

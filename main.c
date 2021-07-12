@@ -14,8 +14,8 @@ int main(int argc, char **argv) {
   int flag = 0;
   initialize();
 
-  while(gen < MaxGen){ 
-    generation();
+  while(gen < MaxGen){
+    generation(); // roulette wheel or tournament
     initReport();
     nextGen();
 
