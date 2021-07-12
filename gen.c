@@ -5,6 +5,8 @@ int roulette(int sumFitness, int popSize);
 void crossover(int om1[], int om2[]);
 double eval(int chromosome[], int lchrom);
 void statistics(int popSize);
+float f_random();
+
 
 void generation(){
 
@@ -12,7 +14,7 @@ void generation(){
   int k = 0;
   int om1[50] = {0};
   int om2[50] = {0};
-
+  float rndm;
 
   for(int i = 0; i < popSize; i += 2){
 
@@ -22,10 +24,19 @@ void generation(){
     for (int i = 0; i< lchrom; i++){
       om1[i] = population[p1][i];
       om2[i] = population[p2][i];
-
     }
 
-    crossover(om1,om2);
+    rndm = f_random();
+    printf("RNDMMMM -> %f\n", rndm);
+    if (rndm <= 0.8) {//pCross
+      crossover(om1,om2);
+    }
+    else {
+      for (int i = 0; i < lchrom; i++){
+        ci1[i] = om1[i];
+        ci2[i] = om2[i];
+      }
+    }
 
     for (int i = 0; i < lchrom; i++){
       children[k][i] = ci1[i];

@@ -17,3 +17,5 @@ extern int ci2[50];
 extern int MaxGen;
 extern int gen;
 extern int solution[50];
+extern double pMut;
+extern int cnt;

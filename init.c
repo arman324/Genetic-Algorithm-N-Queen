@@ -22,6 +22,8 @@ int ci2[50] = {0};
 int MaxGen = 0;
 int gen = 0;
 int solution[50] = {0};
+double pMut = 0.001;
+int cnt = 0;
 
 void initData();
 void initPop();

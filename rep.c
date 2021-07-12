@@ -30,4 +30,5 @@ void rawStat(int flag)
       }
       printf("\n");
   }
+  printf("Number of Mutex  -->  %d\n", cnt);
 }
