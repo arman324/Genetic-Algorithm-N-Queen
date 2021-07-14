@@ -77,6 +77,7 @@ If maxFitness > 0.97 then pMut = 0.01;
 | n = 25 | Local Optimal with 0.9966 fitness |
 | n = 50 | Local Optimal with 0.9934 fitness |
 
+---
 
 ## Support
 Reach out to me at riasiarman@yahoo.com
