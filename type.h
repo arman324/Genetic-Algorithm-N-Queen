@@ -18,6 +18,7 @@ extern int MaxGen;
 extern int gen;
 extern int solution[200];
 extern double pMut;
+extern double pMutTemp;
 extern double pCross;
 extern int cnt;
 extern int modes;

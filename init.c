@@ -24,6 +24,7 @@ int MaxGen = 0;
 int gen = 0;
 int solution[200] = {0};
 double pMut;
+double pMutTemp;
 double pCross;
 int cnt = 0;
 int modes = 0;
@@ -72,14 +73,16 @@ void initData(){/* inittialize global params,
     scanf("%d", &MaxGen);
     printf("MaxGen is : %d\n", MaxGen);
 
-    //printf("Enter pMut - pMut -> ");
-    //scanf("%lf", &pMut);
-    pMut = 0.001;
+    printf("Enter pMut - pMut -> ");
+    scanf("%lf", &pMut);
+    //pMut = 0.001;
+    pMutTemp = pMut;
+
     printf("pMut is : %lf\n", pMut);
 
-    //printf("Enter pCross - pCross -> ");
-    //scanf("%lf", &pCross);
-    pCross = 0.8;
+    printf("Enter pCross - pCross -> ");
+    scanf("%lf", &pCross);
+    //pCross = 0.8;
     printf("pCross is : %lf\n", pCross);
 
 }

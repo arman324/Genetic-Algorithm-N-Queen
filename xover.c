@@ -95,7 +95,7 @@ int muteX(int pa){
 
   if (maxFitness > 0.97) {
     pMut = 0.01;
-  } else pMut = 0.001;
+  } else pMut = pMutTemp;
 
   if (rndm <= pMut) {//pMut
     random_number = rnd(0, lchrom);
