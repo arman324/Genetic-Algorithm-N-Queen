@@ -20,12 +20,15 @@ void generation(){
 
   for(int i = 0; i < popSize; i += 2){
 
-    /*
-    p1 = roulette(sumFitness, popSize);
-    p2 = roulette(sumFitness, popSize);
-*/
-    p1 = tournament(popSize);
-    p2 = tournament(popSize);
+    if (modes == 2){   // mode = 2 means roulette wheel
+      p1 = roulette(sumFitness, popSize);
+      p2 = roulette(sumFitness, popSize);
+  }
+
+    if (modes == 1){   // mode = 1 means tournament
+      p1 = tournament(popSize);
+      p2 = tournament(popSize);
+  }
 
     for (int i = 0; i< lchrom; i++){
       om1[i] = population[p1][i];
@@ -37,8 +40,8 @@ void generation(){
 
 
     if (rndm <= pCross) {//pCross
-      //crossover(om1,om2); //one point crossover
-      twoPointCrossover(om1,om2); //two points crossover
+      if (modes == 2) crossover(om1,om2); //one point crossover
+      if (modes == 1) twoPointCrossover(om1,om2); //two points crossover
     }
     else {
       for (int i = 0; i < lchrom; i++){

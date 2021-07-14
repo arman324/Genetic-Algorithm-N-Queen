@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "type.h"
 #include <unistd.h>
+#include <stdlib.h>
 
 void initialize();
 void generation();
@@ -12,6 +13,8 @@ void report(int flag);
 int main(int argc, char **argv) {
   gen = 0;
   int flag = 0;
+  modes = atoi(argv[1]);
+
   initialize();
 
   while(gen < MaxGen){

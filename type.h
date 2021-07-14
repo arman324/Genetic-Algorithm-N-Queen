@@ -20,3 +20,4 @@ extern int solution[200];
 extern double pMut;
 extern double pCross;
 extern int cnt;
+extern int modes;

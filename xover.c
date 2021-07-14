@@ -17,16 +17,16 @@ void crossover(int om1[], int om2[]){ //one point crossover
   printf("xp = %d\n", xp);
 
 
-  //MuteX
-  for(i = 0; i < xp; i++){
-    ci1[i] = muteX(om1[i]);
-    ci2[i] = muteX(om2[i]);
-  }
-  for(i = xp; i < lchrom; i++){
-    ci1[i] = muteX(om2[i]);
-    ci2[i] = muteX(om1[i]);
-  }
-
+  if (modes == 2){ //MuteX
+    for(i = 0; i < xp; i++){
+      ci1[i] = muteX(om1[i]);
+      ci2[i] = muteX(om2[i]);
+    }
+    for(i = xp; i < lchrom; i++){
+      ci1[i] = muteX(om2[i]);
+      ci2[i] = muteX(om1[i]);
+    }
+}
 
 /*
   //swapMuteX
@@ -54,18 +54,19 @@ void twoPointCrossover(int om1[], int om2[]){
   printf("xp2 = %d\n", xp2);
 
 
-  //MuteX
-  for(i = 0; i < xp1; i++){
-    ci1[i] = muteX(om1[i]);
-    ci2[i] = muteX(om2[i]);
-  }
-  for(i = xp1; i < xp2; i++){
-    ci1[i] = muteX(om2[i]);
-    ci2[i] = muteX(om1[i]);
-  }
-  for(i = xp2; i < lchrom; i++){
-    ci1[i] = muteX(om1[i]);
-    ci2[i] = muteX(om2[i]);
+  if (modes == 1){ //MuteX
+    for(i = 0; i < xp1; i++){
+      ci1[i] = muteX(om1[i]);
+      ci2[i] = muteX(om2[i]);
+    }
+    for(i = xp1; i < xp2; i++){
+      ci1[i] = muteX(om2[i]);
+      ci2[i] = muteX(om1[i]);
+    }
+    for(i = xp2; i < lchrom; i++){
+      ci1[i] = muteX(om1[i]);
+      ci2[i] = muteX(om2[i]);
+    }
   }
 
 /*

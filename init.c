@@ -26,6 +26,7 @@ int solution[200] = {0};
 double pMut;
 double pCross;
 int cnt = 0;
+int modes = 0;
 
 void initData();
 void initPop();
