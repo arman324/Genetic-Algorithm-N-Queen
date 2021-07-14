@@ -14,6 +14,10 @@
 | `./output 2` | Roulette Wheel | One-Point | Uniform |
 | `./output 3` | Tournament Selection | Two-Point | Swap Mutation |
 
+```diff
+- THE BEST ANSWER is for mode number 1, It can solve 88-Queens Problem
+```
+
 ---
 ## Mode number 1:
 | Population Size | MaxGen | pCross | Start pMut |
