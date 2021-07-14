@@ -71,20 +71,11 @@ If maxFitness > 0.97 then pMut = 0.01;
 ### Output:
 | N-Queens Problem | Result |
 | ------------- | ------------- |
-| n = 8 | Global Optimal in 14th generation |
-| n = 9 | Global Optimal in 36th generation |
-| n = 11 | Global Optimal in 104th generation |
-| n = 20 | Global Optimal in 71th generation |
+| n = 8 | Global Optimal in 9th generation |
+| n = 9 | Global Optimal in 35th generation |
+| n = 10 | Global Optimal in 45th generation |
 | n = 25 | Local Optimal with 0.9966 fitness |
-| n = 30 | Global Optimal in 942th generation |
-| n = 40 | Local Optimal with 0.9974 fitness |
-| n = 45 | Global Optimal in 159th generation |
-| n = 48 | Global Optimal in 240th generation |
-| n = 50 | Local Optimal with 0.9991 fitness |
-| n = 75 | Local Optimal with 0.9996 fitness |
-| n = 80 | Global Optimal in 870th generation |
-| n = 88 (THE BEST ANSWER) | Global Optimal in 745th generation |
-| n = 100 | Local Optimal with 0.9993 fitness |
+| n = 50 | Local Optimal with 0.9934 fitness |
 
 
 ## Support
