@@ -14,8 +14,8 @@ void generation(){
 
   int p1, p2;
   int k = 0;
-  int om1[50] = {0};
-  int om2[50] = {0};
+  int om1[100] = {0};
+  int om2[100] = {0};
   float rndm;
 
   for(int i = 0; i < popSize; i += 2){
