@@ -69,23 +69,22 @@ void twoPointCrossover(int om1[], int om2[]){
     }
   }
 
-/*
-  //swapMuteX
-  for(i = 0; i < xp1; i++){
-    ci1[i] = om1[i];
-    ci2[i] = om2[i];
+  if (modes == 3){ //swapMuteX
+    for(i = 0; i < xp1; i++){
+      ci1[i] = om1[i];
+      ci2[i] = om2[i];
+    }
+    for(i = xp1; i < xp2; i++){
+      ci1[i] = om2[i];
+      ci2[i] = om1[i];
+    }
+    for(i = xp2; i < lchrom; i++){
+      ci1[i] = om1[i];
+      ci2[i] = om2[i];
+    }
+    swapMuteX(1);
+    swapMuteX(2);
   }
-  for(i = xp1; i < xp2; i++){
-    ci1[i] = om2[i];
-    ci2[i] = om1[i];
-  }
-  for(i = xp2; i < lchrom; i++){
-    ci1[i] = om1[i];
-    ci2[i] = om2[i];
-  }
-  swapMuteX(1);
-  swapMuteX(2);
-*/
 }
 
 int muteX(int pa){

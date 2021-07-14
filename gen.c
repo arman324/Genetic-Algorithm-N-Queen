@@ -25,7 +25,7 @@ void generation(){
       p2 = roulette(sumFitness, popSize);
   }
 
-    if (modes == 1){   // mode = 1 means tournament
+    if (modes == 1 || modes == 3){   // mode = 1 or 3 means tournament
       p1 = tournament(popSize);
       p2 = tournament(popSize);
   }
@@ -41,7 +41,7 @@ void generation(){
 
     if (rndm <= pCross) {//pCross
       if (modes == 2) crossover(om1,om2); //one point crossover
-      if (modes == 1) twoPointCrossover(om1,om2); //two points crossover
+      if (modes == 1 || modes == 3) twoPointCrossover(om1,om2); //two points crossover
     }
     else {
       for (int i = 0; i < lchrom; i++){
