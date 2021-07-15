@@ -1,5 +1,5 @@
 # Genetic-Algorithm-N-Queens
-### Solving n queen problem with Genetic Algorithm
+### Solving N-queens problem with Genetic Algorithm
 
 ## Overview
 ### N-queens puzzle:
