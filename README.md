@@ -2,7 +2,7 @@
 ### Solving n queen problem with Genetic Algorithm
 
 ## Overview
-*
+The N-queens puzzle is the problem of placing N chess queens on an N*N chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column, or diagonal.
 
 ## How to Run
 1. ``gcc -Wall -o output main.c init.c random.c eval.c stats.c gen.c select.c xover.c rep.c``
@@ -14,9 +14,11 @@
 | `./output 2` | Roulette Wheel | One-Point | Uniform |
 | `./output 3` | Tournament Selection | Two-Point | Swap Mutation |
 
+## THE BEST ANSWER 🎉
 ```diff
 + THE BEST ANSWER is for mode number 1, It can solve the 88-Queens Problem
 ```
+88-Queens is a version of the N-Queens puzzle on an 88x88 chessboard with 88 queens. The object is to calculate positions for all 88 queens such that no queen is attacking any other queen.
 
 ---
 ## Mode number 1:
@@ -41,7 +43,7 @@ If maxFitness > 0.97 then pMut = 0.01;
 | n = 50 | Local Optimal with 0.9991 fitness |
 | n = 75 | Local Optimal with 0.9996 fitness |
 | n = 80 | Global Optimal in 870th generation |
-| n = 88 (THE BEST ANSWER) | Global Optimal in 745th generation |
+| n = 88  🎉 | Global Optimal in 745th generation |
 | n = 100 | Local Optimal with 0.9993 fitness |
 
 --- 
