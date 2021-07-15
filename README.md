@@ -2,7 +2,14 @@
 ### Solving n queen problem with Genetic Algorithm
 
 ## Overview
+### N-queens puzzle:
 The N-queens puzzle is the problem of placing N chess queens on an N*N chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column, or diagonal.
+### Genetic algorithm:
+Genetic algorithms are commonly used to generate high-quality solutions to optimization and search problems by relying on biologically inspired operators such as mutation, crossover, and selection. (for more information, you can use this [link](https://en.wikipedia.org/wiki/Genetic_algorithm)). 
+
+## Goal
+In this project, I have used the Genetic algorithm to solve the N-queens puzzle. I have implemented two selection methods, two different types of crossover and, two mutation methods. In the table below, you can see how to run each model.
+
 
 ## How to Run
 1. ``gcc -Wall -o output main.c init.c random.c eval.c stats.c gen.c select.c xover.c rep.c``
@@ -21,7 +28,7 @@ The N-queens puzzle is the problem of placing N chess queens on an N*N chessboar
 88-Queens is a version of the N-Queens puzzle on an 88x88 chessboard with 88 queens. The object is to calculate positions for all 88 queens such that no queen is attacking any other queen.
 
 ---
-## Mode number 1:
+## Mode number 1️⃣:
 | Population Size | MaxGen | pCross | Start pMut |
 | ------------- | ------------- | ------------- | ------------- |
 | 1000 | 1000 | 0.8 | 0.001 |
@@ -47,7 +54,7 @@ If maxFitness > 0.97 then pMut = 0.01;
 | n = 100 | Local Optimal with 0.9993 fitness |
 
 --- 
-## Mode number 2:
+## Mode number 2️⃣:
 | Population Size | MaxGen | pCross | Start pMut |
 | ------------- | ------------- | ------------- | ------------- |
 | 1000 | 1000 | 0.8 | 0.001 |
@@ -67,7 +74,7 @@ If maxFitness > 0.97 then pMut = 0.01;
 | n = 15 | Local Optimal with 0.97 fitness |
 
 ---
-## Mode number 3:
+## Mode number 3️⃣:
 | Population Size | MaxGen | pCross | Start pMut |
 | ------------- | ------------- | ------------- | ------------- |
 | 1000 | 1000 | 0.8 | 0.001 |
